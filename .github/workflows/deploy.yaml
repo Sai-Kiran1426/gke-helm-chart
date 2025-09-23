@@ -12,7 +12,7 @@ env:
   GCP_PROJECT_ID: gcp-test-472411
   GCP_REGION: us-central1
   GCP_ZONE: us-central1-a
-  GKE_CLUSTER_NAME: gke
+  GKE_CLUSTER_NAME: autopilot-cluster-1
   GCP_REPO: helm-repo
   IMAGE_NAME: python-app
   IMAGE_TAG: ${{ github.sha }}
