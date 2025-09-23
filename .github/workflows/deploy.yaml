@@ -46,11 +46,7 @@ jobs:
         docker push $IMAGE
 
     - name: Get GKE credentials
-      uses: google-github-actions/get-gke-credentials@v3
-      with:
-        cluster_name: ${{ env.GKE_CLUSTER_NAME }}
-        location: ${{ env.GCP_REGION }}
-        project_id: ${{ env.GCP_PROJECT_ID }}
+      run: gcloud container clusters get-credentials autopilot-cluster-1 --region us-central1 --project gcp-test-472411
 
     - name: Install Helm
       run: |
